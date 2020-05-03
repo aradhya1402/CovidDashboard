@@ -7,13 +7,12 @@ const imageBaseURL = 'static/img/';
 function KPICardComponent (props){
                 return( 
                 <>  
-                <Card
-                    border={props.variant.toLowerCase()}
-                    //text={props.variant.toLowerCase() === 'light' ? 'dark' : 'white'}
-                    style={{ width: '18rem' }}
+                <Card border={props.variant.toLowerCase()} 
+                      //text={props.variant.toLowerCase() === 'light' ? 'dark' : 'white'}
+                        style={{ width: '18rem' }}
                 >
                     <Card.Header>{props.kpi}</Card.Header>
-                    <Card.Img class="kpi-image" variant="top" src={`${imageBaseURL}${props.variant.toLowerCase()}.png`}  />
+                    <Card.Img class='kpi-image' variant="top" src={`${imageBaseURL}${props.variant.toLowerCase()}.png`}  />
                     <Card.Body>
                 
                     <Card.Text class="kpi-text" >

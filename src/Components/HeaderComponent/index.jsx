@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import KPICardComponent from "../KPICard";
+import NavBarComponent from "../NavBarComponent";
 import CardDeck from 'react-bootstrap/CardDeck'
 class HeaderComponent extends Component {
     constructor(props) {
@@ -37,6 +38,9 @@ class HeaderComponent extends Component {
         return (
 
             <div className="header-container">
+
+                <NavBarComponent></NavBarComponent>
+                <br />
                 <CardDeck>
                     <KPICardComponent variant="Primary" kpi="Total Confirmed Cases" data_number={this.state.confirmedCases} lastUpdated={this.state.lastUpdated} />
                     <KPICardComponent variant="Success" kpi="Total Recovered Cases" data_number={this.state.recoveredCases} lastUpdated={this.state.lastUpdated} />
