@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
+import moment from 'moment'
 import { render } from '@testing-library/react';
 const imageBaseURL = 'static/img/';
 
@@ -19,6 +20,9 @@ function KPICardComponent (props){
                                 {props.data_number}
                     </Card.Text>
                     </Card.Body>
+                    <Card.Footer>
+                        <small className="text-muted">Last updated at {moment(props.lastUpdated).format("MM-DD-YYYY LT")}</small>
+                    </Card.Footer>
                 </Card>
                 <br />
                 </>
