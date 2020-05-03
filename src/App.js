@@ -4,6 +4,7 @@ import './App.css';
 import './SCSS/main.scss';
 import HeaderComponent from "../src/Components/HeaderComponent";
 
+
 function App() {
   return (
     <div className="covid-dashboard-container">
