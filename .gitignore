@@ -1,1 +1,6 @@
+#Your git crendentials
+.my-credentials
+
+# excluding node_modules 
 node_modules
+ 
