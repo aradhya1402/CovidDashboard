@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import KPICardComponent from "../KPICard";
+import ButtonComponent from '../ButtonComponent'
+
 class HeaderComponent extends Component {
     constructor(props) {
         super(props);
@@ -11,7 +13,7 @@ class HeaderComponent extends Component {
         return (
 
             <div className="header-container">
-                <KPICardComponent data="Hello" />
+                <ButtonComponent title="Click me!" onClick={()=> {}}/>
             </div>
         )
 
