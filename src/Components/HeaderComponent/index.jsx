@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import KPICardComponent from "../KPICard";
 import NavBarComponent from "../NavBarComponent";
 import CardDeck from 'react-bootstrap/CardDeck'
+import ButtonComponent from '../ButtonComponent'
+
 class HeaderComponent extends Component {
     constructor(props) {
         super(props);
@@ -47,6 +49,7 @@ class HeaderComponent extends Component {
                     <KPICardComponent variant="Warning" kpi="Total Active Cases" data_number={this.state.activeCases} lastUpdated={this.state.lastUpdated} />
                     <KPICardComponent variant="Danger" kpi="Total Deaths" data_number={this.state.deaths} lastUpdated={this.state.lastUpdated}/>
                 </CardDeck>
+                <ButtonComponent title="Click me!" onClick={()=> {}}/>
             </div>
         )
 
