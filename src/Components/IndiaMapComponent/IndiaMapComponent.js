@@ -3,10 +3,8 @@ import React, {Component} from 'react';
 import { 
     ComposableMap, Geographies, Geography 
   } from 'react-simple-maps';
-import ReactTooltip from "react-tooltip";
-import { StatefulTooltip } from "baseui/tooltip";
-import { Input } from "baseui/input";
-// import { Block } from "baseui/input";
+  import { StatefulToolTip } from "react-portal-tooltip"
+
 
   const INDIA_TOPO_JSON = require('./indiatopo.json');
   // Red Variants
@@ -15,7 +13,7 @@ import { Input } from "baseui/input";
 
   const PROJECTION_CONFIG = {
     scale: 350,
-    center: [78.9629, 22.5937]
+    center: [100.9629, 22.5937]
   };
   const geographyStyle = {
     default: {
@@ -39,25 +37,21 @@ class IndiaMapComponent extends Component {
             this.state={
                 stateData:{},
                 resultArray:[],
-                tooltip:true,
+                tooltip:false,
                 setTooltipContent:'',
 
             }
         
     }
     
-    onMouseEnter = (geo, current = { value: 'NA' }) => {
-      
-    };
-      
-    // onMouseLeave = () => {
-     
-    //     this.setState({
-    //       setTooltipContent:''
-       
-
-    //   })
-    // }
+    showTooltip() {
+      if(!this.state.tooltip) {
+      this.setState({tooltip: true})
+      }
+  }
+  hideTooltip() {
+      this.setState({tooltip: false})
+  }
 
     getStatesData =() => {
 
@@ -148,6 +142,7 @@ class IndiaMapComponent extends Component {
     }
 
     render() {
+      const button = <span>Hover me to display the tooltip</span>
       // const tooltipContent, setTooltipContent = '';
         // const gradientData = {
         //     fromColor: COLOR_RANGE[0],
@@ -178,12 +173,13 @@ class IndiaMapComponent extends Component {
                 
                 
                 return (
+             
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
                     fill={current ? this.colorRange(current.value.total) : DEFAULT_COLOR}
                     style={geographyStyle}
-                    onMouseEnter={this.onMouseEnter(geo, current)}
+                    onMouseEnter={this.showTooltip(geo, current)}
                     // onMouseLeave={this.onMouseLeave()}
                   
                   />
@@ -201,6 +197,9 @@ class IndiaMapComponent extends Component {
         </Geographies>
         
         </ComposableMap>
+        {/* <StatefulToolTip parent={ button }>
+    Stateful Tooltip content here!
+  </StatefulToolTip> */}
         {/* {this.state.tooltip==true? <div>Aradhya</div> : ''} */}
        
         
