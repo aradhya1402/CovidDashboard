@@ -2,7 +2,7 @@ import React from 'react';
 
 const ButtonComponent = (props) => {
     return (
-        <div className="" onClick={props.onClick}>
+        <div className="button-outer" onClick={props.onClick}>
             <span className = "button-inner">
                 {props.title}
             </span>
