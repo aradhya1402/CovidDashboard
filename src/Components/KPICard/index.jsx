@@ -12,10 +12,10 @@ function KPICardComponent (props){
                     style={{ width: '18rem' }}
                 >
                     <Card.Header>{props.kpi}</Card.Header>
-                    <Card.Img class="kpi-image" variant="top" src={`${imageBaseURL}${props.variant.toLowerCase()}.png`}  />
+                    <Card.Img className="kpi-image" variant="top" src={`${imageBaseURL}${props.variant.toLowerCase()}.png`}  />
                     <Card.Body>
                 
-                    <Card.Text class="kpi-text" >
+                    <Card.Text className="kpi-text" >
                                 {props.data_number}
                     </Card.Text>
                     </Card.Body>
