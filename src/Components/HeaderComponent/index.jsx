@@ -41,15 +41,14 @@ class HeaderComponent extends Component {
 
             <div className="header-container">
 
-                <NavBarComponent></NavBarComponent>
-                <br />
+                <NavBarComponent/>
                 <CardDeck>
                     <KPICardComponent variant="Primary" kpi="Total Confirmed Cases" data_number={this.state.confirmedCases} lastUpdated={this.state.lastUpdated} />
                     <KPICardComponent variant="Success" kpi="Total Recovered Cases" data_number={this.state.recoveredCases} lastUpdated={this.state.lastUpdated} />
                     <KPICardComponent variant="Warning" kpi="Total Active Cases" data_number={this.state.activeCases} lastUpdated={this.state.lastUpdated} />
                     <KPICardComponent variant="Danger" kpi="Total Deaths" data_number={this.state.deaths} lastUpdated={this.state.lastUpdated}/>
                 </CardDeck>
-                <ButtonComponent title="Click me!" onClick={()=> {}}/>
+                {/* <ButtonComponent title="Click me!" onClick={()=> {}}/> */}
             </div>
         )
 
