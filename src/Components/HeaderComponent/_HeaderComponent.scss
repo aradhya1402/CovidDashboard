@@ -1,5 +1,13 @@
-.header-container
-{
-    margin: 1rem;
+.header-container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 15% 30% 1fr;
+    background-color: $background-color;
+    text-align: center;
+    overflow: scroll;
+    .card-deck{
+        justify-content: space-evenly;
+        padding: 40px;
+        
+    }
 }
-

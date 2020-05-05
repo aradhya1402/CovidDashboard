@@ -1,0 +1,31 @@
+.logo-container {
+    height: 100%;
+    color: white;
+    font-weight: bold;
+
+    padding: 10px;
+    background: #303030;
+    box-shadow: 12px 12px 34px #252525,
+        -12px -12px 34px #3b3b3b;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .main-logo-container {
+        height: 80%;
+        box-sizing: border-box;
+        padding: 20px;
+
+        img {
+            height: 120%;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .main-logo-container {
+            width: 75%;
+        }
+
+    }
+
+}
