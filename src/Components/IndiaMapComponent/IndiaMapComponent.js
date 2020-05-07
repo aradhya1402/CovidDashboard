@@ -12,7 +12,7 @@ const INDIA_TOPO_JSON = require('./indiatopo.json');
 const DEFAULT_COLOR = 'brown';
 
 const PROJECTION_CONFIG = {
-  scale: 220,
+  scale: 300,
   center: [100.9629, 10]
 };
 const geographyStyle = {
@@ -163,8 +163,8 @@ class IndiaMapComponent extends Component {
         <ComposableMap
           projectionConfig={PROJECTION_CONFIG}
           projection="geoMercator"
-          width={600}
-          height={220}
+          width={800}
+          height={400}
           data-tip=""
         >
 
@@ -188,14 +188,19 @@ class IndiaMapComponent extends Component {
               })
 
             }
-
+            <div className="legends"> 
+        <div>active:</div>
+        <div>recovered:</div>
+        <div>deceased:</div>
+        </div>
 
           </Geographies>
-
+          
         </ComposableMap>
         <ReactTooltip >
           {this.state.setTooltip}
         </ReactTooltip>
+        
         </div>
     )
   }

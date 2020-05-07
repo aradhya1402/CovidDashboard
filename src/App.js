@@ -10,8 +10,9 @@ function App() {
   return (
     <div className="covid-dashboard-container">
       <HeaderComponent />
-      
       <IndiaMapComponent />
+      
+     
       
     </div>
   );
