@@ -4,6 +4,7 @@ import {
   ComposableMap, Geographies, Geography
 } from 'react-simple-maps';
 import ReactTooltip from 'react-tooltip';
+import { withRouter } from "react-router-dom";
 
 
 const INDIA_TOPO_JSON = require('./indiatopo.json');
@@ -12,8 +13,9 @@ const INDIA_TOPO_JSON = require('./indiatopo.json');
 const DEFAULT_COLOR = 'brown';
 
 const PROJECTION_CONFIG = {
-  scale: 300,
-  center: [100.9629, 10]
+  scale: 500,
+  center: [85, 20],
+  rotation: [-11, 0, 0],
 };
 const geographyStyle = {
   default: {
@@ -159,13 +161,14 @@ class IndiaMapComponent extends Component {
 
   render() {
     return (
-      <div>
+      <div className="india-map">
         <ComposableMap
           projectionConfig={PROJECTION_CONFIG}
           projection="geoMercator"
-          width={800}
+          width={400}
           height={400}
           data-tip=""
+          style={{ width: "100%", height: "auto" }} 
         >
 
           <Geographies geography={INDIA_TOPO_JSON}>
@@ -188,11 +191,7 @@ class IndiaMapComponent extends Component {
               })
 
             }
-            <div className="legends"> 
-        <div>active:</div>
-        <div>recovered:</div>
-        <div>deceased:</div>
-        </div>
+
 
           </Geographies>
           
@@ -205,4 +204,4 @@ class IndiaMapComponent extends Component {
     )
   }
 }
-export default IndiaMapComponent;
+export default withRouter(IndiaMapComponent);

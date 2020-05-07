@@ -1,13 +1,21 @@
 .header-container {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 15% 30% 1fr;
+    
+   
     background-color: $background-color;
     text-align: center;
-    overflow: scroll;
+   
     .card-deck{
         justify-content: space-evenly;
-        padding: 40px;
+        padding: 20px;
+       
+        .card-deck .card {
+    /* flex: 1 0; */
+    height: 19vh;
+    width: 19vw;
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-left: 15px;
+        }
         
     }
 }
