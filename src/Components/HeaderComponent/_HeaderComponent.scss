@@ -35,6 +35,12 @@
             padding-left: 10%;
             border-left: 2px solid;
         }
+        p{
+            color: rgba($color: #ffffff, $alpha: 0.9);
+            font-size: 18px;
+            margin: 0px 10px;
+            font-weight: bold;
+        }
         
     }
     .map-chart-state-container {
@@ -56,6 +62,16 @@
                 svg{
                     height: 100%;
                 }
+            }
+        }
+        .state-data-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            .kpi-container{
+                max-height: 180px;
+                margin: 20px 20px;
             }
         }
     }

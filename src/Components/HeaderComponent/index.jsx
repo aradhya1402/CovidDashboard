@@ -5,7 +5,7 @@ import CardDeck from 'react-bootstrap/CardDeck'
 import ButtonComponent from '../ButtonComponent';
 import MapDropdownComponent from "../MapDropdownComponent/MapDropdownComponent";
 import IndiaMapComponent from "../IndiaMapComponent/IndiaMapComponent";
-
+import ProfileComponent from "../ProfileCard";
 class HeaderComponent extends Component {
     constructor(props) {
         super(props);
@@ -75,10 +75,14 @@ class HeaderComponent extends Component {
                 </CardDeck>
                 <div className="dropdown-header-container">
                     <div className="map-demo-dropdown">
+                    <p>Select the type of visualition : </p>
                         <MapDropdownComponent  selectedDropdownValue = {this.getMapsType} defaultDropdown = {this.state.mapDropDown} mapOptionsArr= {this.state.mapOptions}/>
+                       
                     </div>
                     <div className="state-dropdown">
+                    <p>Select state to view data : </p>
                         <MapDropdownComponent selectedDropdownValue = {this.getStateData} defaultDropdown ={this.state.stateDropDown}mapOptionsArr = {this.state.stateOptions}/>
+                        
                     </div>
                 </div>
                 <div className="map-chart-state-container">
@@ -86,13 +90,14 @@ class HeaderComponent extends Component {
                         <IndiaMapComponent />
                     </div>
                     <div className="state-data-container">
-                        <KPICardComponent variant="Primary" kpi="Total Confirmed Cases" data_number={this.state.confirmedCases} lastUpdated={this.state.lastUpdated} />
-                        <KPICardComponent variant="Success" kpi="Total Recovered Cases" data_number={this.state.recoveredCases} lastUpdated={this.state.lastUpdated} />
-                        <KPICardComponent variant="Warning" kpi="Total Active Cases" data_number={this.state.activeCases} lastUpdated={this.state.lastUpdated} />
-                        <KPICardComponent variant="Danger" kpi="Total Deaths" data_number={this.state.deaths} lastUpdated={this.state.lastUpdated} />
+                        <KPICardComponent variant="Primary" kpi="Total Confirmed Cases" data_number={this.state.stateTotal} lastUpdated={this.state.lastUpdated} />
+                        <KPICardComponent variant="Success" kpi="Total Recovered Cases" data_number={this.state.stateRecovered} lastUpdated={this.state.lastUpdated} />
+                        <KPICardComponent variant="Warning" kpi="Total Active Cases" data_number={this.state.stateActive} lastUpdated={this.state.lastUpdated} />
+                        <KPICardComponent variant="Danger" kpi="Total Deaths" data_number={this.state.stateDeceased} lastUpdated={this.state.lastUpdated} />
                     </div>
                 </div>
                 {/* <ButtonComponent title="Click me!" onClick={()=> {}}/> */}
+                {/* <ProfileComponent/> */}
             </div>
         )
 
