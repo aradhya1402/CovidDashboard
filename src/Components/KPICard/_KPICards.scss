@@ -18,8 +18,8 @@
         align-items: center;
 
         .kpi-image {
-            height: 100px;
-            width: 100px;
+            height: 64px;
+            width: 64px;
             align-self: center;
 
         }
@@ -33,6 +33,8 @@
 
 
     .card-header {
+        padding: 0.35rem 0.85rem;
+     margin-bottom: 0;
         font-weight: 500;
         border-bottom: 2px solid rgba($color: #000000, $alpha: 0.3);
         background-color: transparent;

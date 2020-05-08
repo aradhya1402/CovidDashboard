@@ -1,0 +1,28 @@
+
+.map-dropdown {
+    height: 27px;
+    background-color: #303030;
+    width: 12vw;
+    color: white;
+    border: 1px solid;
+    border-radius: 15px;
+    padding-left: 12px;
+    display: flex;
+    .map-name {
+        width:80%
+    }
+    .down-arrow {
+        width:20%;
+        float:right
+    }
+   
+}
+.map-options {
+    color: white;
+    padding-left: 12px;
+    width: 12vw;
+    padding: 10px;
+    /* height: 9vh; */
+    background-color: #3a3a3a;
+
+}
