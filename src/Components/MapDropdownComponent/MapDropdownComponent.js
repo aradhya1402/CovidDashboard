@@ -24,7 +24,7 @@ class MapDropdownComponent extends Component {
 
     render() {
         return(
-            <div>
+            <div className="map-drpdown-and-options">
            
             <div className="map-dropdown " onClick={this.openDropdownBox}>
             <div className="map-name">{this.props.defaultDropdown} </div>
@@ -34,7 +34,7 @@ class MapDropdownComponent extends Component {
             {this.state.showDropdown ? <div className='map-options' >
                 {this.props.mapOptionsArr.map(item=> {
                     return (
-                        <div onClick={(e)=>{this.changeDropdownValue(e);this.props.selectedDropdownValue(e)}}>{item}</div>
+                        <div onClick={(e)=>{this.props.selectedDropdownValue(e)}}>{item}</div>
                     )
                 })}
                 </div>: null }

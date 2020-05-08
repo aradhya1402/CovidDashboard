@@ -89,6 +89,7 @@ class IndiaMapComponent extends Component {
 
     let requiredStateData = Object.assign({}, this.state.stateData);
     let stateArray = Object.keys(requiredStateData);
+    console.log(stateArray)
     let resultArray = [];
     let districtArray = [];
     let singleObj = {};

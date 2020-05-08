@@ -1,4 +1,8 @@
-
+.map-drpdown-and-options{
+    height:5vh;
+    margin-top:20px;
+    z-index: 100000;
+}
 .map-dropdown {
     height: 27px;
     background-color: #303030;
@@ -22,7 +26,8 @@
     padding-left: 12px;
     width: 12vw;
     padding: 10px;
-    /* height: 9vh; */
+    max-height: 12vh; 
+    overflow: auto;
     background-color: #3a3a3a;
 
 }
