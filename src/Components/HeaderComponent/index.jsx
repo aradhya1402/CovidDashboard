@@ -20,9 +20,12 @@ class HeaderComponent extends Component {
             mapDropDown : "",
             stateDropDown  :" ",
             mapOptions : ["A","B"],
-            stateOptions : ["C" , "D"]
-
-        }
+            stateOptions : ["C" , "D"],
+            stateTotal : "",
+            stateRecovered : "",
+            stateActive : "",
+            stateDeceased : ""
+         }
     }
     getMapsType = () =>{
 
@@ -55,6 +58,7 @@ class HeaderComponent extends Component {
     }
     componentDidMount() {
         this.getNationalData();
+
     }
 
     render() {
