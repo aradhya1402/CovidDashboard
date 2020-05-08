@@ -5,7 +5,7 @@ import CardDeck from 'react-bootstrap/CardDeck'
 import ButtonComponent from '../ButtonComponent';
 import MapDropdownComponent from "../MapDropdownComponent/MapDropdownComponent";
 import IndiaMapComponent from "../IndiaMapComponent/IndiaMapComponent";
-
+import ProfileComponent from "../ProfileCard";
 class HeaderComponent extends Component {
     constructor(props) {
         super(props);
@@ -155,10 +155,14 @@ class HeaderComponent extends Component {
                 </CardDeck>
                 <div className="dropdown-header-container">
                     <div className="map-demo-dropdown">
+                    <p>Select the type of visualition : </p>
                         <MapDropdownComponent  selectedDropdownValue = {this.getMapsType} defaultDropdown = {this.state.mapDropDown} mapOptionsArr= {this.state.mapOptions}/>
+                       
                     </div>
                     <div className="state-dropdown">
-                        <MapDropdownComponent selectedDropdownValue = {this.getStateData} defaultDropdown ={this.state.stateDropDown} mapOptionsArr = {this.state.stateOptions}/>
+                    <p>Select state to view data : </p>
+                        <MapDropdownComponent selectedDropdownValue = {this.getStateData} defaultDropdown ={this.state.stateDropDown}mapOptionsArr = {this.state.stateOptions}/>
+                        
                     </div>
                 </div>
                 <div className="map-chart-state-container">
@@ -174,6 +178,7 @@ class HeaderComponent extends Component {
                     </div>
                 </div>
                 {/* <ButtonComponent title="Click me!" onClick={()=> {}}/> */}
+                {/* <ProfileComponent/> */}
             </div>
         )
 
