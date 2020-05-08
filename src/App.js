@@ -14,9 +14,9 @@ function App() {
     <div className="covid-dashboard-container">
       <HeaderComponent />
       {/* <IndiaMapComponent /> */}
-      <MapDropDown />
+      {/* <MapDropDown /> */}
 
-      <Route
+      {/* <Route
             exact path='/indiaMap'
             render={(props) => <IndiaMapComponent {...props} />}
       />
@@ -24,7 +24,7 @@ function App() {
             exact path='/lineMap'
             render={(props) => <LineMap {...props} />}
       />
-     
+      */}
       
     </div>
     </Router>

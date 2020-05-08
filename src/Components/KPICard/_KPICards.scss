@@ -1,9 +1,10 @@
 .kpi-container {
     background: #303030;
-    box-shadow: 12px 12px 34px #252525,
-        -12px -12px 34px #3b3b3b;
-    border-radius: 32px;
-
+    box-shadow: 8px 8px 18px #252525,
+        -12px -12px 18px #3b3b3b;
+    border-radius: 24px;
+    margin: 10px 0px;
+    min-width: 300px;
     .card {
         background-color: transparent;
         color: white;

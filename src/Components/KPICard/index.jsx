@@ -16,9 +16,9 @@ function KPICardComponent(props) {
                     {props.data_number}
                 </Card.Text>
             </Card.Body>
-            <Card.Footer>
+            {/* <Card.Footer>
                 <small className="text-muted">Last updated at {moment(props.lastUpdated).format("MM-DD-YYYY LT")}</small>
-            </Card.Footer>
+            </Card.Footer> */}
         </Card>
         </div>
 
